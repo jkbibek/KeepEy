@@ -1,0 +1,106 @@
+[
+  {
+    "id": "log_1780130118445",
+    "laptopId": "LIB-716",
+    "studentId": "234525224",
+    "rentedAt": "2026-05-30T08:35:18.445Z",
+    "returnedAt": null,
+    "result": "rented"
+  },
+  {
+    "id": "log_1780129192406",
+    "laptopId": "LIB-712",
+    "studentId": "123123123",
+    "rentedAt": "2026-05-30T08:19:52.406Z",
+    "returnedAt": null,
+    "result": "rented"
+  },
+  {
+    "id": "log_1780128270573",
+    "laptopId": "LIB-705",
+    "studentId": "123123123",
+    "rentedAt": "2026-05-30T08:04:30.573Z",
+    "returnedAt": null,
+    "result": "rented"
+  },
+  {
+    "id": "log_1780128109390",
+    "laptopId": "LIB-703",
+    "studentId": "123123123",
+    "rentedAt": "2026-05-30T08:01:49.390Z",
+    "returnedAt": null,
+    "result": "rented"
+  },
+  {
+    "id": "log_1780127470490",
+    "laptopId": "LIB-707",
+    "studentId": "123123123",
+    "rentedAt": "2026-05-30T07:51:10.490Z",
+    "returnedAt": null,
+    "result": "rented"
+  },
+  {
+    "id": "log_1780126206234",
+    "laptopId": "LIB-707",
+    "studentId": "116782021",
+    "rentedAt": "2026-05-30T07:30:06.234Z",
+    "returnedAt": null,
+    "result": "rented"
+  },
+  {
+    "id": "log_1780126025901",
+    "laptopId": "LIB-706",
+    "studentId": "116782021",
+    "rentedAt": "2026-05-30T07:27:05.901Z",
+    "returnedAt": null,
+    "result": "rented"
+  },
+  {
+    "id": "log_1780124916997",
+    "laptopId": "LIB-705",
+    "studentId": "116782021",
+    "rentedAt": "2026-05-30T07:08:36.997Z",
+    "returnedAt": null,
+    "result": "rented"
+  },
+  {
+    "id": "log_1780124838516",
+    "laptopId": "LIB-704",
+    "studentId": "116782021",
+    "rentedAt": "2026-05-30T07:07:18.516Z",
+    "returnedAt": null,
+    "result": "rented"
+  },
+  {
+    "id": "log_1780123665765",
+    "laptopId": "LIB-703",
+    "studentId": "1234123",
+    "rentedAt": "2026-05-30T06:47:45.765Z",
+    "returnedAt": null,
+    "result": "rented"
+  },
+  {
+    "id": "log_004",
+    "laptopId": "LIB-101",
+    "studentId": "2023551201",
+    "returnedAt": "2026-05-29T16:45:00.000Z",
+    "result": "returned",
+    "rentedAt": "2026-05-29T10:00:00.000Z"
+  },
+  {
+    "id": "log_005",
+    "laptopId": "LIB-305",
+    "studentId": "2022987741",
+    "returnedAt": "2026-05-29T09:30:00.000Z",
+    "result": "issue_found",
+    "rentedAt": "2026-05-28T13:15:00.000Z"
+  },
+  {
+    "id": "log_006",
+    "laptopId": "LIB-508",
+    "studentId": "2024012202",
+    "returnedAt": "2026-05-28T10:20:00.000Z",
+    "result": "returned",
+    "rentedAt": "2026-05-27T14:00:00.000Z"
+  }
+]

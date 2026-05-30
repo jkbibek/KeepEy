@@ -1,0 +1,17 @@
+<svg width="320" height="92" viewBox="0 0 320 92" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">KeepEy</title>
+  <path d="M18 74V18" stroke="#151B23" stroke-width="9" stroke-linecap="round"/>
+  <path d="M22 50L58 18" stroke="#151B23" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M35 42L62 74" stroke="#151B23" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M112 54H76C77.5 64.5 84.8 70.4 95 70.4C102.4 70.4 107.8 67.8 112 63.2" stroke="#151B23" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M76 54C77.2 40.8 84.9 31.6 96.4 31.6C108.4 31.6 115.3 41.2 115.3 54" stroke="#151B23" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M162 54H126C127.5 64.5 134.8 70.4 145 70.4C152.4 70.4 157.8 67.8 162 63.2" stroke="#151B23" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M126 54C127.2 40.8 134.9 31.6 146.4 31.6C158.4 31.6 165.3 41.2 165.3 54" stroke="#151B23" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M181 88V34" stroke="#151B23" stroke-width="8" stroke-linecap="round"/>
+  <path d="M181 49C184.5 38.5 192.3 32.2 203 32.2C217.2 32.2 227 43.5 227 56C227 68.5 217.2 79.8 203 79.8C192.8 79.8 185 73.8 181 64.3" stroke="#151B23" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M268 19H249C237.4 19 231 26.5 231 38.1V54.1C231 65.7 237.4 73.2 249 73.2H268" stroke="#151B23" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="250" cy="48" r="7.5" fill="#1677FF"/>
+  <path d="M265 48H279" stroke="#151B23" stroke-width="8" stroke-linecap="round"/>
+  <path d="M290 34L304 73" stroke="#151B23" stroke-width="8" stroke-linecap="round"/>
+  <path d="M315 34L300 80C297.6 87.3 293.6 90 286.5 90H281" stroke="#1677FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
