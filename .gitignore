@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+artifacts/
+test-results/
+tests/results/
+playwright-report/
+.codex/*.log
+.codex/
+.expo/
+.vite/
+logs/

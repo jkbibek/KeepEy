@@ -1,0 +1,107 @@
+[
+  {
+    "id": "return_photos_1780129016838_z7pw8l",
+    "studentId": "123123123",
+    "deviceType": "laptop",
+    "deviceId": "LIB-703",
+    "rentId": "rent_1780128109390",
+    "status": "uploaded",
+    "photos": [
+      {
+        "id": "return_photos_1780129016838_z7pw8l_1",
+        "angle": "open_screen_keyboard",
+        "status": "uploaded",
+        "path": "db/uploads/returns/return_photos_1780129016838_z7pw8l/open_screen_keyboard.json"
+      },
+      {
+        "id": "return_photos_1780129016838_z7pw8l_2",
+        "angle": "closed_top_accessories",
+        "status": "uploaded",
+        "path": "db/uploads/returns/return_photos_1780129016838_z7pw8l/closed_top_accessories.json"
+      },
+      {
+        "id": "return_photos_1780129016838_z7pw8l_3",
+        "angle": "closed_bottom",
+        "status": "uploaded",
+        "path": "db/uploads/returns/return_photos_1780129016838_z7pw8l/closed_bottom.json"
+      }
+    ],
+    "createdAt": "2026-05-30T08:16:56.838Z",
+    "inspection": {
+      "status": "pending",
+      "resultPath": null,
+      "heatmapPath": null,
+      "issues": []
+    }
+  },
+  {
+    "id": "return_photos_1780128960254_wfk3r6",
+    "studentId": "123123123",
+    "deviceType": "laptop",
+    "deviceId": "LIB-703",
+    "rentId": "rent_1780128109390",
+    "status": "uploaded",
+    "photos": [
+      {
+        "id": "return_photos_1780128960254_wfk3r6_1",
+        "angle": "open_screen_keyboard",
+        "status": "uploaded",
+        "path": "db/uploads/returns/return_photos_1780128960254_wfk3r6/open_screen_keyboard.json"
+      },
+      {
+        "id": "return_photos_1780128960254_wfk3r6_2",
+        "angle": "closed_top_accessories",
+        "status": "uploaded",
+        "path": "db/uploads/returns/return_photos_1780128960254_wfk3r6/closed_top_accessories.json"
+      },
+      {
+        "id": "return_photos_1780128960254_wfk3r6_3",
+        "angle": "closed_bottom",
+        "status": "uploaded",
+        "path": "db/uploads/returns/return_photos_1780128960254_wfk3r6/closed_bottom.json"
+      }
+    ],
+    "createdAt": "2026-05-30T08:16:00.254Z",
+    "inspection": {
+      "status": "pending",
+      "resultPath": null,
+      "heatmapPath": null,
+      "issues": []
+    }
+  },
+  {
+    "id": "return_photos_1780128953081_zyuz82",
+    "studentId": "123123123",
+    "deviceType": "laptop",
+    "deviceId": "LIB-703",
+    "rentId": "rent_1780128109390",
+    "status": "uploaded",
+    "photos": [
+      {
+        "id": "return_photos_1780128953081_zyuz82_1",
+        "angle": "open_screen_keyboard",
+        "status": "uploaded",
+        "path": "db/uploads/returns/return_photos_1780128953081_zyuz82/open_screen_keyboard.json"
+      },
+      {
+        "id": "return_photos_1780128953081_zyuz82_2",
+        "angle": "closed_top_accessories",
+        "status": "uploaded",
+        "path": "db/uploads/returns/return_photos_1780128953081_zyuz82/closed_top_accessories.json"
+      },
+      {
+        "id": "return_photos_1780128953081_zyuz82_3",
+        "angle": "closed_bottom",
+        "status": "uploaded",
+        "path": "db/uploads/returns/return_photos_1780128953081_zyuz82/closed_bottom.json"
+      }
+    ],
+    "createdAt": "2026-05-30T08:15:53.081Z",
+    "inspection": {
+      "status": "pending",
+      "resultPath": null,
+      "heatmapPath": null,
+      "issues": []
+    }
+  }
+]
