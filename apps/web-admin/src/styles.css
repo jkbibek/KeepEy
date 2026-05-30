@@ -605,17 +605,112 @@ tbody tr:last-child td {
   color: var(--purple);
 }
 
-.empty-state {
+.empty-state,
+.loading-state {
   display: grid;
   place-items: center;
-  gap: 7px;
+  gap: 10px;
   min-height: 320px;
   color: var(--body);
+  text-align: center;
+  padding: 24px;
 }
 
-.empty-state strong {
+.empty-state-mark {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  background: var(--canvas-soft);
+  color: var(--muted);
+}
+
+.empty-state-mark svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.empty-state strong,
+.loading-state strong {
   color: var(--ink);
   font-size: 16px;
+  font-weight: 600;
+}
+
+.loading-skeleton {
+  display: grid;
+  width: min(100%, 420px);
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.loading-skeleton span {
+  display: block;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #eceff3 0%, #f7f8fa 45%, #eceff3 90%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+.loading-skeleton span:nth-child(1) {
+  width: 72%;
+}
+
+.loading-skeleton span:nth-child(2) {
+  width: 100%;
+}
+
+.loading-skeleton span:nth-child(3) {
+  width: 88%;
+}
+
+.loading-skeleton span:nth-child(4) {
+  width: 56%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.button:focus-visible,
+.tab:focus-visible,
+.icon-button:focus-visible,
+.issue-link:focus-visible,
+.language-icon-button:focus-visible,
+.device-switch-button:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-skeleton span {
+    animation: none;
+    background: #eceff3;
+  }
+
+  .language-icon-button:active,
+  .button:active {
+    transform: none;
+  }
 }
 
 .drawer-backdrop {

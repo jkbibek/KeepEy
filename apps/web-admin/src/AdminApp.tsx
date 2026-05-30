@@ -78,6 +78,8 @@ const copy = {
     emptyLaptop: "조건에 맞는 노트북이 없습니다.",
     emptyLog: "조건에 맞는 로그가 없습니다.",
     emptyHint: "상단 필터를 지우거나 다른 상태 탭을 선택하세요.",
+    loadingMessage: "데이터를 불러오는 중입니다",
+    loadingHint: "최신 장비·반납 정보를 API에서 가져오고 있습니다.",
     table: {
       brand: "기종",
       laptopId: "노트북 번호",
@@ -145,6 +147,8 @@ const copy = {
     emptyLaptop: "No laptops match the current filters.",
     emptyLog: "No logs match the current filters.",
     emptyHint: "Clear the top filter or choose another status tab.",
+    loadingMessage: "Loading admin data",
+    loadingHint: "Fetching the latest device and return records from the API.",
     table: {
       brand: "Brand",
       laptopId: "Laptop number",
@@ -598,9 +602,23 @@ export function AdminApp() {
           )}
 
           {activeTab === "logs" ? (
-            loading ? <EmptyState message="Loading admin data." hint="Fetching current API data." /> : <LogTable logs={filteredLogs} text={text} language={language} />
+            loading ? (
+              <LoadingState message={text.loadingMessage} hint={text.loadingHint} />
+            ) : (
+              <LogTable logs={filteredLogs} text={text} language={language} />
+            )
+          ) : loading ? (
+            <LoadingState message={text.loadingMessage} hint={text.loadingHint} />
           ) : (
-            loading ? <EmptyState message="Loading admin data." hint="Fetching current API data." /> : <DeviceTable devices={filteredDevices} text={text} language={language} labels={labels} deviceNumberLabel={deviceNumberLabel} emptyMessage={emptyDeviceMessage} onIssueClick={openIssueCard} />
+            <DeviceTable
+              devices={filteredDevices}
+              text={text}
+              language={language}
+              labels={labels}
+              deviceNumberLabel={deviceNumberLabel}
+              emptyMessage={emptyDeviceMessage}
+              onIssueClick={openIssueCard}
+            />
           )}
         </section>
       </section>
@@ -800,9 +818,36 @@ function LogTable({
 function EmptyState({ message, hint }: { message: string; hint: string }) {
   return (
     <div className="empty-state">
+      <span className="empty-state-mark" aria-hidden="true">
+        <EmptyTrayIcon />
+      </span>
       <strong>{message}</strong>
       <span>{hint}</span>
     </div>
+  );
+}
+
+function LoadingState({ message, hint }: { message: string; hint: string }) {
+  return (
+    <div className="loading-state" aria-live="polite" aria-busy="true">
+      <div className="loading-skeleton" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
+      <strong>{message}</strong>
+      <span>{hint}</span>
+    </div>
+  );
+}
+
+function EmptyTrayIcon() {
+  return (
+    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+      <path d="M4 8h16l-1.2 9.6A2 2 0 0 1 16.82 19H7.18a2 2 0 0 1-1.98-1.4L4 8Z" />
+      <path d="M9 11v5M15 11v5M10 4h4l1 4H9l1-4Z" />
+    </svg>
   );
 }
 
