@@ -231,8 +231,11 @@ export function RentPage({
           ) : null}
 
           {state === "loadingDevices" ? (
-            <div className="status-panel" aria-live="polite">
-              <span>{rentText.loadingDevices}</span>
+            <div className="status-panel status-loading" aria-live="polite" aria-busy="true">
+              <span className="async-state-label">
+                <span className="spinner" aria-hidden="true" />
+                {rentText.loadingDevices}
+              </span>
               <p>{rentText.loadingDevicesBody}</p>
             </div>
           ) : null}
@@ -258,16 +261,23 @@ export function RentPage({
                   ))}
                 </div>
               ) : (
-                <div className="status-panel status-error">
-                  <span>{rentText.noDevices}</span>
+                <div className="empty-state-panel" role="status">
+                  <span className="empty-state-icon" aria-hidden="true">
+                    <EmptyIcon />
+                  </span>
+                  <strong>{rentText.noDevices}</strong>
+                  <p>{rentText.listBody}</p>
                 </div>
               )}
             </div>
           ) : null}
 
           {state === "creating" ? (
-            <div className="status-panel" aria-live="polite">
-              <span>{rentText.creating}</span>
+            <div className="status-panel status-loading" aria-live="polite" aria-busy="true">
+              <span className="async-state-label">
+                <span className="spinner" aria-hidden="true" />
+                {rentText.creating}
+              </span>
               <p>{rentText.creatingBody}</p>
             </div>
           ) : null}
@@ -296,8 +306,11 @@ export function RentPage({
           ) : null}
 
           {state === "confirming" ? (
-            <div className="status-panel" aria-live="polite">
-              <span>{rentText.confirming}</span>
+            <div className="status-panel status-loading" aria-live="polite" aria-busy="true">
+              <span className="async-state-label">
+                <span className="spinner" aria-hidden="true" />
+                {rentText.confirming}
+              </span>
               <p>{rentText.confirmingBody}</p>
             </div>
           ) : null}
@@ -328,5 +341,15 @@ export function RentPage({
         </div>
       </section>
     </main>
+  );
+}
+
+function EmptyIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+      <rect x="4" y="7" width="16" height="12" rx="2" />
+      <path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7" />
+      <path d="M4 11h16" />
+    </svg>
   );
 }

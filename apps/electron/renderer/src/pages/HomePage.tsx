@@ -82,7 +82,7 @@ export function HomePage({
               <h1 id="task-title" className="task-title">
                 {text.taskTitle}
               </h1>
-              <p>Click on the task you want to proceed with.</p>
+              <p>{text.taskSubtitle}</p>
             </div>
 
             <div className="task-card-grid" aria-label={text.taskTitle}>
@@ -102,7 +102,7 @@ export function HomePage({
                 </span>
                 <strong>{text.rentLabel}</strong>
                 <span className="task-card-link">
-                  Get started <ArrowIcon />
+                  {text.rentCardCta} <ArrowIcon />
                 </span>
               </button>
 
@@ -122,7 +122,7 @@ export function HomePage({
                 </span>
                 <strong>{text.returnLabel}</strong>
                 <span className="task-card-link">
-                  Proceed <ArrowIcon />
+                  {text.returnCardCta} <ArrowIcon />
                 </span>
               </button>
             </div>
@@ -130,11 +130,11 @@ export function HomePage({
             <div className="task-info-row" aria-label="Rental information">
               <span>
                 <InfoIcon />
-                Rental Time: Max 1 week
+                {text.rentalTimeInfo}
               </span>
               <span>
                 <ShieldIcon />
-                Student ID required
+                {text.studentIdRequiredInfo}
               </span>
             </div>
           </section>
@@ -143,9 +143,11 @@ export function HomePage({
 
       <footer className="login-footer">
         <div className="home-footer-content">
-          <span>Student Number: {studentId}</span>
+          <span>
+            {text.footerStudentPrefix}: {studentId}
+          </span>
           <span className="footer-divider" aria-hidden="true" />
-          <span>© 2024 KeepEy Management System</span>
+          <span>{text.footerCopyright}</span>
         </div>
       </footer>
     </main>

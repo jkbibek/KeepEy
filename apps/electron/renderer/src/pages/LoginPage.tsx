@@ -23,29 +23,6 @@ export function LoginPage({
   onSubmit,
   onToggleLanguage,
 }: LoginPageProps) {
-  const isEnglish = text.localeName === "Korean";
-  const loginCopy = isEnglish
-    ? {
-        title: "Student number",
-        body: "Please enter your credentials to continue.",
-        label: "Student number",
-        placeholder: "e.g. 20230001",
-        help: "6-12 digits",
-        submit: "Continue",
-        submitting: "Checking...",
-        footer: "Student Number: --",
-      }
-    : {
-        title: "학생 번호 입력",
-        body: "계속하려면 학생 번호를 입력하세요.",
-        label: "학생 번호",
-        placeholder: "예: 20230001",
-        help: "6-12자리 숫자",
-        submit: "계속",
-        submitting: "확인 중...",
-        footer: "Student Number: --",
-      };
-
   return (
     <main className="login-page">
       <header className="login-topbar">
@@ -57,13 +34,14 @@ export function LoginPage({
         <div className="login-stack">
           <div className="login-panel">
             <div className="login-heading">
-              <h1 id="login-title">{loginCopy.title}</h1>
-              <p>{loginCopy.body}</p>
+              <p className="login-eyebrow">{text.eyebrow}</p>
+              <h1 id="login-title">{text.loginHeading}</h1>
+              <p>{text.loginBody}</p>
             </div>
 
             <form className="student-form" onSubmit={onSubmit} noValidate>
               <div className="field-group">
-                <label htmlFor="student-id">{loginCopy.label}</label>
+                <label htmlFor="student-id">{text.studentLabel}</label>
                 <input
                   id="student-id"
                   value={studentId}
@@ -71,31 +49,43 @@ export function LoginPage({
                   autoComplete="off"
                   maxLength={12}
                   minLength={6}
-                  placeholder={loginCopy.placeholder}
+                  placeholder={text.studentPlaceholder}
                   aria-invalid={Boolean(errors.studentId)}
                   aria-describedby={errors.studentId ? "student-id-error" : "student-id-help"}
                   onChange={(event) => onStudentIdChange(event.target.value.replace(/\D/g, ""))}
                 />
                 {errors.studentId ? (
-                  <p className="field-error" id="student-id-error">
+                  <p className="field-error" id="student-id-error" role="alert">
                     {errors.studentId}
                   </p>
                 ) : (
                   <p className="field-help" id="student-id-help">
                     <InfoIcon />
-                    <span>{loginCopy.help}</span>
+                    <span>{text.studentHelp}</span>
                   </p>
                 )}
               </div>
 
-              <button className="primary-button" type="submit" disabled={isSubmitting}>
-                {isSubmitting ? loginCopy.submitting : loginCopy.submit}
+              <button
+                className={`primary-button${isSubmitting ? " is-loading" : ""}`}
+                type="submit"
+                disabled={isSubmitting}
+                aria-busy={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>
+                    <span className="button-spinner" aria-hidden="true" />
+                    <span>{text.submitting}</span>
+                  </>
+                ) : (
+                  text.continue
+                )}
               </button>
             </form>
 
             <div className="login-brand-panel" aria-label="KeepEy service message">
               <BrandMark className="login-panel-logo" />
-              <p>Operational clarity and trust for our university campus environment.</p>
+              <p>{text.loginBrandTagline}</p>
             </div>
           </div>
 
@@ -105,8 +95,8 @@ export function LoginPage({
                 <ShieldIcon />
               </span>
               <div>
-                <strong>Secure Access</strong>
-                <p>Encrypted sessions</p>
+                <strong>{text.loginSecureTitle}</strong>
+                <p>{text.loginSecureDesc}</p>
               </div>
             </article>
 
@@ -115,8 +105,8 @@ export function LoginPage({
                 <SupportIcon />
               </span>
               <div>
-                <strong>IT Support</strong>
-                <p>24/7 Assistance</p>
+                <strong>{text.loginSupportTitle}</strong>
+                <p>{text.loginSupportDesc}</p>
               </div>
             </article>
           </div>
@@ -124,7 +114,9 @@ export function LoginPage({
       </section>
 
       <footer className="login-footer">
-        <span>{loginCopy.footer}</span>
+        <span>
+          {text.footerStudentPrefix}: --
+        </span>
       </footer>
     </main>
   );

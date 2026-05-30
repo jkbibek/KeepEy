@@ -18,10 +18,22 @@ export type AppCopy = {
   continue: string;
   submitting: string;
   taskTitle: string;
+  taskSubtitle: string;
   rentLabel: string;
   rentAction: string;
+  rentCardCta: string;
   returnLabel: string;
   returnAction: string;
+  returnCardCta: string;
+  rentalTimeInfo: string;
+  studentIdRequiredInfo: string;
+  loginSecureTitle: string;
+  loginSecureDesc: string;
+  loginSupportTitle: string;
+  loginSupportDesc: string;
+  loginBrandTagline: string;
+  footerStudentPrefix: string;
+  footerCopyright: string;
   chooseDeviceTitle: string;
   laptopLabel: string;
   tabletLabel: string;
@@ -49,13 +61,25 @@ export const copy = {
     continue: "계속",
     submitting: "확인 중...",
     taskTitle: "작업을 선택하세요",
+    taskSubtitle: "진행할 작업을 선택해 주세요.",
     rentLabel: "대여",
     rentAction: "Rent",
+    rentCardCta: "시작하기",
     returnLabel: "반납",
     returnAction: "Return",
+    returnCardCta: "진행하기",
+    rentalTimeInfo: "대여 기간: 최대 1주",
+    studentIdRequiredInfo: "학생 번호 인증 필요",
+    loginSecureTitle: "안전한 접속",
+    loginSecureDesc: "세션 암호화 적용",
+    loginSupportTitle: "IT 지원",
+    loginSupportDesc: "운영 시간 내 지원",
+    loginBrandTagline: "캠퍼스 장비 대여·반납을 한곳에서 안전하게 관리합니다.",
+    footerStudentPrefix: "학생 번호",
+    footerCopyright: "© 2026 KeepEy 장비 관리",
     chooseDeviceTitle: "기기를 선택하세요",
-    laptopLabel: "Laptop",
-    tabletLabel: "Tablet",
+    laptopLabel: "노트북",
+    tabletLabel: "태블릿",
     unavailable: "준비 중",
     rentMockTitle: "대여 화면",
     returnMockTitle: "반납 화면",
@@ -78,10 +102,22 @@ export const copy = {
     continue: "Continue",
     submitting: "Checking...",
     taskTitle: "Choose a task",
+    taskSubtitle: "Select the task you want to continue with.",
     rentLabel: "Rent",
     rentAction: "Rent",
+    rentCardCta: "Get started",
     returnLabel: "Return",
     returnAction: "Return",
+    returnCardCta: "Proceed",
+    rentalTimeInfo: "Rental period: up to 1 week",
+    studentIdRequiredInfo: "Student ID required",
+    loginSecureTitle: "Secure access",
+    loginSecureDesc: "Encrypted sessions",
+    loginSupportTitle: "IT support",
+    loginSupportDesc: "Help during service hours",
+    loginBrandTagline: "Campus device rent and return, managed in one trusted place.",
+    footerStudentPrefix: "Student number",
+    footerCopyright: "© 2026 KeepEy device management",
     chooseDeviceTitle: "Choose a device",
     laptopLabel: "Laptop",
     tabletLabel: "Tablet",
