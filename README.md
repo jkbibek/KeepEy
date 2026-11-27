@@ -1,3 +1,3 @@
 ## Project Presentation
 
-[View the KeepEy Hackathon Presentation (PDF)](./KeepEy.pdf)
+[View Hackathon Presentation (PDF)](./KeepEy_.pdf)
